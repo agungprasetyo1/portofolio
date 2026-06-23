@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Agung Prasetyo</title>
+
+<style>
+
+html{
+    scroll-behavior:smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0b0f19;
+    color:white;
+}
+
+/* NAVBAR */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#0b0f19;
+    z-index:1000;
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo{
+    color:#00d9ff;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color:#00d9ff;
+}
+
+/* HOME */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    padding:120px 10%;
+}
+
+.hero-img img{
+    width:320px;
+    border-radius:50%;
+    border:5px solid #00d9ff;
+    box-shadow:0 0 30px #00d9ff;
+}
+
+.hero-card{
+    max-width:600px;
+}
+
+.hero-card h1{
+    font-size:60px;
+    color:#00d9ff;
+}
+
+.hero-card h2{
+    margin:10px 0;
+    font-size:32px;
+}
+
+.hero-card p{
+    line-height:1.8;
+    color:#ccc;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#00d9ff;
+    color:black;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* SECTION */
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    color:#00d9ff;
+    margin-bottom:50px;
+    font-size:40px;
+}
+
+/* ABOUT */
+.about-content{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* SKILLS */
+.skill-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:#111827;
+    border:2px solid #00d9ff;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #00d9ff;
+}
+
+.skill-card h3{
+    color:#00d9ff;
+}
+
+/* PROJECT */
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:#111827;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+    border:1px solid #00d9ff;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #00d9ff;
+}
+
+.project-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.project-info{
+    padding:20px;
+}
+
+.project-info h3{
+    color:#00d9ff;
+    margin-bottom:10px;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    margin-top:50px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-card h1{
+    font-size:45px;
+}
+
+.hero-card h2{
+    font-size:24px;
+}
+
+.hero-img img{
+    width:250px;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">Agung Prasetyo</div>
+
+<ul>
+<li><a href="#home" class="active">HOME</a></li>
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#skills">SKILLS</a></li>
+<li><a href="#project">PROJECT</a></li>
+<li><a href="#contact">CONTACT</a></li>
+</ul>
+
+</nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="hero">
+
+<div class="hero-img">
+<img src="foto.png" alt="Foto Profil">
+</div>
+
+<div class="hero-card">
+<h1>Agung Prasetyo</h1>
+<h2>Mahasiswa Teknik Komputer</h2>
+
+<p>
+Mahasiswa Teknik Komputer yang memiliki minat pada bidang Embedded System,
+Internet of Things (IoT), Artificial Intelligence, dan Web Development.
+</p>
+
+<a href="#skills" class="btn">Explore Skills</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+
+<h2 class="section-title">ABOUT ME</h2>
+
+<div class="about-content">
+Saya adalah mahasiswa Teknik Komputer yang aktif dalam pengembangan proyek
+berbasis Arduino, ESP32, IoT, dan sistem cerdas. Saya senang belajar teknologi
+baru serta mengembangkan solusi yang mengintegrasikan perangkat keras dan perangkat lunak.
+</div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+
+<h2 class="section-title">SKILLS</h2>
+
+<div class="skill-grid">
+
+<div class="skill-card">
+<h3>Arduino</h3>
+</div>
+
+<div class="skill-card">
+<h3>ESP32</h3>
+</div>
+
+<div class="skill-card">
+<h3>Internet of Things</h3>
+</div>
+
+<div class="skill-card">
+<h3>HTML CSS JavaScript</h3>
+</div>
+
+<div class="skill-card">
+<h3>C/C++ Programming</h3>
+</div>
+
+<div class="skill-card">
+<h3>Artificial Intelligence</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECT -->
+<section id="project">
+
+<h2 class="section-title">MY PROJECT</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+<img src="project1.jpg" alt="">
+<div class="project-info">
+<h3>Smart Camera ESP32-CAM</h3>
+<p>
+Sistem kamera pintar dengan tombol trigger dan notifikasi Telegram.
+</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="project2.jpg" alt="">
+<div class="project-info">
+<h3>Bluetooth Audio Receiver</h3>
+<p>
+ESP32 sebagai penerima audio Bluetooth dengan OLED dan kontrol volume.
+</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="project3.jpg" alt="">
+<div class="project-info">
+<h3>Smart Roof Otomatis</h3>
+<p>
+Atap otomatis menggunakan sensor hujan dan sensor cahaya berbasis Arduino.
+</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="project4.jpg" alt="">
+<div class="project-info">
+<h3>Monitoring IoT</h3>
+<p>
+Monitoring data sensor secara real-time menggunakan ESP32 dan dashboard web.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+<h2 class="section-title">CONTACT</h2>
+
+<p>📧 Email : agung@example.com</p>
+<p>📱 WhatsApp : 08xxxxxxxxxx</p>
+<p>📷 Instagram : @agungprasetyo</p>
+
+</section>
+
+<footer>
+© 2026 Agung Prasetyo | Teknik Komputer
+</footer>
+
+<script>
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const sectionTop=section.offsetTop;
+
+if(pageYOffset>=sectionTop-200){
+current=section.getAttribute("id");
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+link.classList.add("active");
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
